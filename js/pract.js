@@ -1,3 +1,3 @@
 "use strict";
-
-console.log(4 + +"5");
+let num = 5
+console.log(num + +"5");
