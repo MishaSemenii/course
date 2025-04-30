@@ -10,7 +10,7 @@ function start() {
   }
 }
 
-// start();
+start();
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -22,8 +22,8 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
-    const a = prompt("Один з останніх фільмів?", ""),
-      b = prompt("На скільки оціните його?", "");
+    const a = prompt("Один з останніх фільмів?", "").trim(),
+      b = prompt("На скільки оціните його?", "").trim();
 
     if (a != null && b != null && a != "" && b != "" && a.length < 50) {
       personalMovieDB.movies[a] = b;
@@ -35,7 +35,7 @@ function rememberMyFilms() {
   }
 }
 
-// rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel() {
   if (personalMovieDB.count < 10) {
@@ -49,7 +49,7 @@ function detectPersonalLevel() {
   }
 }
 
-// detectPersonalLevel();
+detectPersonalLevel();
 
 function showMyDB(hidden) {
   if (!hidden) {
@@ -66,3 +66,5 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
+
